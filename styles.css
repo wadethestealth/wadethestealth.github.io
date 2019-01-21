@@ -1,0 +1,171 @@
+* {
+	font-family: Arial, sans-serif;
+	margin: 0px;
+}
+html {
+	font-size: 16px;
+	color: #1d1d1d;
+}
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+	margin: 0px;
+}
+h1 {
+	font-size: 3rem;
+	font-weight: 400;
+	margin: 0px;
+	margin-bottom: 10px;
+}
+h2 {
+	font-size: 2rem;
+	font-weight: 400;
+	margin: 0px;
+}
+h3 {
+	font-size: 1.6rem;
+	margin: 0px;
+	margin-bottom: 10px;
+	font-weight: 400;
+}
+h4 {
+	font-size: 1.25rem;
+	margin: 0px;
+	margin-bottom: 4px;
+	font-weight: 400;
+}
+a, a:visited {
+	color: inherit;
+	display: inline-block;
+}
+a:hover {
+	font-weight: bold;
+}
+input::placeholder {
+	color: inherit;
+}
+textarea::placeholder {
+	color: inherit;
+}
+footer {
+	background-color: #1d1d1d;
+	color: #ffffff;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.flexrow {
+	display: flex;
+	flex-direction: row;
+}
+.flexrowreversed {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+}
+.nodecoration {
+	text-decoration: none;
+}
+.left_column {
+	display: flex;
+	flex-direction: column;
+	padding-left: 30px;
+	width: 200px;
+	box-sizing: border-box;
+}
+.right_column {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding-right: 30px;
+}
+.showcase {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.desc {
+	margin-top: 0px;
+}
+/* Selects Header Links */
+nav>a {
+	text-decoration: none;
+	margin-bottom: .5em;
+}
+/* Selects Link to Current Page */
+a.current {
+	color: #a674ff;
+}
+a.more_link {
+	font-size: 1.25rem;
+}
+/* Selects Dashes */
+div.dash {
+	width: 35px;
+	height: 4px;
+	background-color:#a674ff;
+	margin-bottom: 10px;
+}
+div.dash.white {
+	background-color:#ffffff;
+}
+/* Selects Main Page Sections */
+body>section {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.showcase .work {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	margin-right: 50px;
+	margin-bottom: 30px;
+}
+.showcase .work .photo {
+	height: 75vh;
+}
+/* Selects Contact Form Inputs */
+body>section#contact input[type=text] {
+	background: transparent;
+	border: 2px solid;
+	color: inherit;
+	padding: 10px;
+	font-size: 1rem;
+	margin-bottom: 15px;
+	width: 250px;
+	box-sizing: border-box;
+}
+div#contacter {
+	width: 100%;
+	flex-wrap: wrap;
+}
+body>section#contact input[name=name] {
+	margin-right: 15px;
+}
+/* Selects Contact Message Box */
+body>section#contact textarea[name=message] {
+	background: transparent;
+	border: 2px solid;
+	color: inherit;
+	padding: 10px;
+	font-size: inherit;
+	height: 5em;
+	max-width: 515px;
+	box-sizing: border-box;
+}
+/* Selects Title Under Name */
+h2#mytitle {
+	color: #a674ff;
+}
+div#myphoto {
+	width: 400px;
+	height: 400px;
+	background-color: #1d1d1d;
+	opacity: .1;
+}
