@@ -6,3 +6,4 @@ request.onload = function() {
   response = request.response;
   console.log(response);
 };
+request.send();
