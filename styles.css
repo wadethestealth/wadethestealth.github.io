@@ -152,7 +152,8 @@ body>section {
 	border: 2px solid #000000;
 	padding: 10px;
 	padding-right: 25px;
-	max-width: 40%;
+  max-width: 500px;
+  overflow: scroll;
 	word-wrap: normal;
 	margin-bottom: 20px;
 }
