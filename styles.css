@@ -36,6 +36,9 @@ h4 {
 	margin-bottom: 4px;
 	font-weight: 400;
 }
+svg {
+	display: block !important;
+}
 a, a:visited {
 	color: inherit;
 	display: inline-block;
