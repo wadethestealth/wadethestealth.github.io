@@ -9,10 +9,11 @@ request.onload = function() {
 	let repos = JSON.parse(response);
 	removeDefaultElements();
 	let currentPath = window.location.pathname;
-	console.log(currentPath);
 	if(currentPath.substring(currentPath.length - 10, currentPath.length) == 'index.html') {
 		addNReposToBody(repos, 3);
-	} else if (currentPath == 'a') {
+	} else if(currentPath.substring(currentPath.length - 5, currentPath.length) == 'index') {
+		addNReposToBody(repos, 3); 
+	} else if(currentPath == '/') {
 		addNReposToBody(repos, 3); 
 	} else {
 		addAllReposToBody(repos);
