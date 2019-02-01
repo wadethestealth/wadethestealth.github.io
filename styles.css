@@ -127,7 +127,7 @@ body>section {
 	max-width: 90%;
 }
 .showcase .work .photodiv {
-	height: 75vh;
+	height: 65vh;
 	display: block;
 	margin-bottom: 7px;
 }
@@ -176,9 +176,12 @@ body>section {
 h2#mytitle {
 	color: #a674ff;
 }
-div#myphoto {
-	width: 400px;
-	height: 400px;
-	background-color: #1d1d1d;
-	opacity: .1;
+.profile {
+  display: flex;
+}
+.titles {
+  align-self: center;
+}
+#myphoto {
+  height: 200px;
 }
