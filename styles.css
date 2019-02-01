@@ -153,8 +153,8 @@ body>section {
 	padding: 10px;
 	padding-right: 25px;
   max-width: 500px;
-  overflow: scroll;
-	word-wrap: normal;
+  overflow: hidden;
+	word-wrap: break-word;
 	margin-bottom: 20px;
 }
 .github_repo_fullname {
