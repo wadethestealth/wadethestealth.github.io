@@ -185,3 +185,6 @@ h2#mytitle {
 #myphoto {
   height: 200px;
 }
+#about .right_column {
+  max-width: 520px;
+}
