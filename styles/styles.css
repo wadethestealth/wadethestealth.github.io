@@ -51,14 +51,14 @@ nav.menu > ul > li > a.menu-item-link > span.menu-item-text {
   text-transform: uppercase;
 }
 
-nav.menu > ul > li:nth-child(3n-2) > a.menu-item-link > span.menu-item-text {
+nav.menu > ul > li.lightBlue > a.menu-item-link > span.menu-item-text {
   background-color: #97aabd;
 }
 
-nav.menu > ul > li:nth-child(3n-1) > a.menu-item-link > span.menu-item-text {
+nav.menu > ul > li.veryBlue > a.menu-item-link > span.menu-item-text {
   background-color: #3d5266;
 }
 
-nav.menu > ul > li:nth-child(3n) > a.menu-item-link > span.menu-item-text {
+nav.menu > ul > li.darkBlue > a.menu-item-link > span.menu-item-text {
   background-color: #041424;
 }
