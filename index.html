@@ -1,147 +1,33 @@
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
-		<link rel='stylesheet' type='text/css' href="styles.css">
+		<meta charset="utf-8">
+		<meta name="author" content="Thomas Wade Denton III">
+		<meta name="description" content="Thomas Wade Denton's Portfolio. I am a Computer Science student at Auburn University, and a Software Engineer. My Github username is wadethestealth.">
+		<!--
+			@TODO
+				- Add open graph data
+				- Add twitter card data
+				- Add third-generation iPad with high-resolution Retina display:
+						<link rel="apple-touch-icon-precomposed" sizes="144x144" href=".png">
+				- Add iPhone with high-resolution Retina display:
+						<link rel="apple-touch-icon-precomposed" sizes="114x114" href=".png">
+				- Add first- and second-generation iPad:
+						<link rel="apple-touch-icon-precomposed" sizes="72x72" href=".png">
+				- Add non-Retina iPhone, iPod Touch, and Android 2.1+ devices:
+						<link rel="apple-touch-icon-precomposed" href=".png">
+				- Add basic favicon:
+						<link rel="shortcut icon" href=".png">
+		-->
+		<link rel='stylesheet' type='text/css' href="styles/normalize.css">
+		<link rel='stylesheet' type='text/css' href="styles/styles.css">
+		<title>Thomas Denton</title>
 	</head>
 	<body>
-		<section class='flexrowreversed' id='page_header'>
-			<header class='right_column'>
-				<h2 id='myname'>Thomas Wade<br>Denton III</h2>
-				<h2 id='mytitle'>Student</h2>
-			</header>
-			<nav class='left_column'>
-				<a class='current'>Home</a>
-				<a href="about.html">About</a>
-				<a href="work.html">Work</a>
-				<a href="github.html">Github</a>
-				<a href="#contact">Contact</a>
-				<a href="Thomas Denton Resume.docx">Resume</a>
-			</nav>
-		</section>
-		<section class='flexrow' id='about'>
-			<aside class='left_column'>
-				<div class='dash'></div>
-				<h3>About</h3>
-			</aside>
-			<section class='right_column'>
-				<div class='dash'></div>
-				<h1>Hi, I'm Thomas Denton.</h1>
-				<div class='profile'>
-          <img src='profile.jpeg' id='myphoto'>
-          <ul class='titles'>
-            <li><h3>Creator</h3></li>
-            <li><h3>Designer</h3></li>
-            <li><h3>Developer</h3></li>
-          </ul>
-				</div>
-				<p>
-					<br>I love inventing creative solutions to complex problems,
-					and I'm always searching for new knowledge.<br><br>
-        </p>
-				<div>
-					<a class='more_link' href="about.html">More About Me</a>
-				</div>
-			</section>
-		</section>
-		<section class='flexrow' id='work'>
-      <aside class='left_column'>
-        <div class='dash'></div>
-        <h3>Work</h3>
-      </aside>
-      <section class='right_column'>
-        <div class='dash'></div>
-        <h1>Projects</h1>
-        <div class='showcase'>
-          <div class='row'>
-            <a class='nodecoration' href="wadethestealth-github-io.html">
-              <div class='work'>
-                <div class='photodiv'>
-                  <img class='photo' src='github.jpg'>
-                </div>
-                <h4 class='title'>My Portfolio</h4>
-                <p class='desc'>Creator</p>
-              </div>
-            </a>
-            <a class='nodecoration' href="tactics-thrill.html">
-              <div class='work'>
-                <div class='photodiv'>
-                  <img class='photo' src='tacticsthrill.jpg'>
-                </div>
-                <h4 class='title'>Tactics Thrill</h4>
-                <p class='desc'>Co-Creator</p>
-              </div>
-            </a>
-          </div>
-          <div class='row'>
-            <a class='nodecoration' href="wismar-jewelry.html">
-              <div class='work'>
-                <div class='photodiv'>
-                  <img class='photo' src='wismarjewelry.jpg'>
-                </div>
-                <h4 class='title'>Wismar Jewelry</h4>
-                <p class='desc'>Freelance</p>
-              </div>
-            </a>
-            <a class='nodecoration' href="d-sign.html">
-              <div class='work'>
-                <div class='photodiv'>
-                  <img class='photo' src='dsign.jpg'>
-                </div>
-                <h4 class='title'>D-SIGN</h4>
-                <p class='desc'>Creator</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-    </section>
-		<section class='flexrow' id='github'>
-			<aside class='left_column'>
-				<div class='dash'></div>
-				<h3>Github</h3>
-			</aside>
-			<section class='right_column'>
-				<div class='dash'></div>
-				<h1>Github Projects</h1>
-				<div id="github_embed">
-					<h3 id="loading_github_embed">Loading...</h3>
-					<noscript id="noscript_github_embed">You do not have Javascript enabled.<br>Please enable and refresh to see the projects.</noscript>
-				</div>
-				<div>
-					<a class='more_link' href="github.html">More Github</a>
-				</div>
-			</section>
-		</section>
-		<section class='flexrow' id='contact'>
-			<aside class='left_column'>
-				<div class='dash'></div>
-				<h3>Contact</h3>
-			</aside>
-			<section class='right_column'>
-				<div class='dash'></div>
-				<h1>I'd love to hear from you.</h1>
-				<a href="mailto:wadeuk3@gmail.com"><h3>Wadeuk3@gmail.com</h3></a>
-				<div class='contact_social'>
-					<h1>Follow me.</h1>
-					<a href="https://www.linkedin.com/in/thomaswadedentoniii/">
-						<img class='contact_social_icon' src="link.png">
-					</a>
-					<a href="https://github.com/wadethestealth">
-						<img class='contact_social_icon' src="github.png">
-					</a>
-				</div>
-			</section>
-		</section>
-		<footer class='flexrow'>
-			<aside class='left_column'>
-				<div class='dash white'></div>
-				<a class='nodecoration' href="#page_header">To The Top</a>
-			</aside>
-			<section class='right_column'>
-				<div class='dash white'></div>
-				<p>&copy; Thomas Wade Denton III</p>
-			</section>
-		</footer>
-		<script src="retrieve-github-repos.js"></script>
+		<div id="home-menu"></div>
+
+		<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+		<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+		<script src="lib/menu.js"></script>
 	</body>
 </html>
