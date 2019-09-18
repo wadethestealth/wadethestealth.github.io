@@ -62,3 +62,14 @@ nav.menu > ul > li.veryBlue > a.menu-item-link > span.menu-item-text {
 nav.menu > ul > li.darkBlue > a.menu-item-link > span.menu-item-text {
   background-color: #041424;
 }
+
+#TODO {
+    border-top: 15px solid #dfdfdf;
+    content:"";
+    margin: 0 auto; /* this centers the line to the full width specified */
+    margin-top: -7.5px;
+    position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+    top: 50%; left: 0; right: 0; bottom: 0;
+    width: 70%;
+    z-index: -1;
+}
