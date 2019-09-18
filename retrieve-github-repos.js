@@ -1,34 +1,38 @@
 let url = 'https://api.github.com/users/wadethestealth/repos';
 let accepts = 'application/vnd.github.v3+json';
 let response;
+let repos;
+let currentRepoDisplay = 0;
 let request = new XMLHttpRequest();
 request.open("GET", url);
 request.setRequestHeader("Accept", accepts);
 request.onload = function() {
 	response = request.response;
-	let repos = JSON.parse(response);
+	repos = JSON.parse(response);
 	removeDefaultElements();
-	let currentPath = window.location.pathname;
-	if(currentPath.substring(currentPath.length - 10, currentPath.length) == 'index.html') {
-		addNReposToBody(repos, 3);
-	} else if(currentPath.substring(currentPath.length - 5, currentPath.length) == 'index') {
-		addNReposToBody(repos, 3); 
-	} else if(currentPath == '/') {
-		addNReposToBody(repos, 3); 
-	} else {
-		addAllReposToBody(repos);
-	}
+	addNReposToBody(repos, 3);
 };
 request.send();
 
-function addAllReposToBody(reposJSON) {
-	reposJSON.forEach(addRepoToBody);
-}
-
 function addNReposToBody(reposJSON, n) {
-	for(let i = 0; i < reposJSON.length && i < n; i++) {
+	if (!reposJSON) return;
+	
+	for (
+		let i = currentRepoDisplay;
+		i < reposJSON.length && i - currentRepoDisplay < n;
+		i++
+	) {
 		addRepoToBody(reposJSON[i]);
+		if (i + 1 >= reposJSON.length) {
+			document.getElementById("github_embed").parentNode.removeChild(
+				document.getElementById("more_github")
+			);
+		}
 	}
+	currentRepoDisplay =
+		currentRepoDisplay + n < reposJSON.length
+			? currentRepoDisplay + n
+			: reposJSON.length;
 }
 
 function removeDefaultElements() {
@@ -53,17 +57,17 @@ function addRepoToBody(repoJSON) {
 	let repoWebsiteElement = document.createElement("a");
 	repoWebsiteElement.setAttribute("href", repoJSON.homepage);
 	repoWebsiteElement.innerHTML = repoJSON.homepage;
-	
+
 	repoLinkToElement.appendChild(repoTitleElement);
 	repoLinkToElement.appendChild(document.createElement("br"));
 	repoLinkToElement.appendChild(repoFullNameElement);
-	
+
 	repoSectionElement.appendChild(repoLinkToElement);
 	repoSectionElement.appendChild(document.createElement("br"));
 	repoSectionElement.appendChild(document.createElement("br"));
 	repoSectionElement.appendChild(repoDescriptionElement);
 	repoSectionElement.appendChild(document.createElement("br"));
 	repoSectionElement.appendChild(repoWebsiteElement);
-	
+
 	document.getElementById("github_embed").appendChild(repoSectionElement);
 }
