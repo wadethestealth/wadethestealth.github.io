@@ -26,10 +26,65 @@
 			<section class='right_column'>
 				<div class='dash'></div>
 				<h1>Hi, I'm Thomas Denton.</h1>
-				<p>
+				<h4>
 					I love inventing creative solutions to complex problems,
 					and I'm always searching for new knowledge.<br><br>
+        </h4>
+				<p>
+          I'm currently majoring in Computer Science at Auburn University,
+          and I'm expected to graduate in December of 2021. While I would
+          traditionally describe myself as a programmer and a lover of
+          technology, I also love the art of design and the theory of
+          strategies. In anything I do, I enjoy the lengthy process of
+          research and discovery, and I am always thrilled to apply
+          what I have studied to better achieve goals. My ideal environment
+          breeds innovation through creative means and cultivates the
+          exchange of everyone's ideas fairly, constructively, and respectfully.
+          <br>
+          <br>
         </p>
+        <h3 id="activities"><br>Activities</h3>
+        <ul id="activity-list" style="display: none;">
+          <li>
+            <h4>Association for Computing Machinery</h4>
+            <p>Member of Competetive Programming Team for Auburn University</p>
+            <p>Member of Artificial Intelligence Club</p>
+            <br>
+          </li>
+          <li>
+            <h4>Auburn University Small Satellite Program</h4>
+            <p>
+              Software Engineer on the COMMS branch, which is
+              in control of sending data to and receiving data
+              from the cube satellites and querying and displaying
+              data in a user-friendly format via the browser.
+            </p>
+						<br>
+          </li>
+        </ul>
+				<span class="more_link" onclick="toggleBlock.call(this, 'activity-list')">Show</span>
+        <h3 id="awards"><br>Awards</h3>
+        <ul id="award-list" style="display: none;">
+          <li>
+            <h4>Dean's List (Fall 2018 - Present)</h4>
+            <p>
+              "This is to certify that Thomas Denton having
+              demonstrated academic achievement, has been
+              named to the Dean's List [for the] Samuel Ginn College
+              of Engineering."
+            </p>
+            <br>
+          </li>
+          <li>
+            <h4>First Place in Web Design</h4>
+            <p>
+              Achieved First Place in Web Design at the ACTE, Alabama Consortium for Technology in Education,
+							State Fair 2018 for my project DSIGN.
+            </p>
+            <br>
+          </li>
+        </ul>
+				<span class="more_link" onclick="toggleBlock.call(this, 'award-list')">Show</span>
 			</section>
 		</section>
 		<section class='flexrow' id='work'>
@@ -131,6 +186,7 @@
 				<p>&copy; Thomas Wade Denton III</p>
 			</section>
 		</footer>
+		<script src="lib.js"></script>
 		<script src="retrieve-github-repos.js"></script>
 	</body>
 </html>
