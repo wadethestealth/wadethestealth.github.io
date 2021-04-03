@@ -1,4 +1,2 @@
 # wadethestealth.github.io
-My Portfolio Website
-
-**Currently Being Redesigned**
+My Portfolio Website For 2021

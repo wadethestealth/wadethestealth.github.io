@@ -1,295 +1,309 @@
+@font-face {
+    font-family: "Fira Code";
+    src: url(FiraCode-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Fira Code";
+    src: url(FiraCode-Regular.ttf);
+    font-weight: normal;
+}
+
 * {
-  font-family: Arial, sans-serif;
-  margin: 0px;
+    padding: 0;
+    margin: 0;
 }
-html {
-  font-size: 34px;
-  color: #1d1d1d;
-}
+
 body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  margin: 0px;
+    background-color: #070720;
+    color: #c7c7e9;
+    font-family: "Calibre", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
 }
-h1 {
-  font-size: 3rem;
-  font-weight: 400;
-  margin: 0px;
-  margin-bottom: 10px;
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    margin-top: -8vh;
 }
-h2 {
-  font-size: 2rem;
-  font-weight: 400;
-  margin: 0px;
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+
+    width: 50vw;
+    min-height: 100vh;
+    padding: 5vh 0vw 5vh 0vw;
 }
-h3 {
-  font-size: 1.6rem;
-  margin: 0px;
-  margin-bottom: 10px;
-  font-weight: 400;
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    margin-top: 8vh;
+    box-shadow: 0px 1px 3px 0px #030313;
+
+    background-color: #070720;
+    z-index: 100001;
+    width: 100%;
+    padding: 3vh 5vw 3vh 5vw;
 }
-h4 {
-  font-size: 1.25rem;
-  margin: 0px;
-  margin-bottom: 4px;
-  font-weight: 400;
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    counter-reset: item; 
 }
-a, a:visited {
-  color: inherit;
-  display: inline-block;
+
+header nav a {
+    font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    font-weight: bold;
+    font-size: 120%;
+    padding: 0vh 1vw 0vh 1vw;
+    color: #ededfc;
+    text-decoration: none;
 }
-ul {
-  list-style-type: none;
-}
+
 footer {
-  background-color: #1d1d1d;
-  color: #ffffff;
-  padding-top: 30px;
-  padding-bottom: 30px;
+    padding: 3vh 5vw 3vh 5vw;
+    box-shadow: 0px -1px 3px 0px #030313;
+    text-align: center;
 }
-.flexrow {
-  display: flex;
-  flex-direction: column;
+
+h1 {
+    font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    color: #ededfc;
+    font-size: 150%;
+    margin-bottom: 2vh;
 }
-.flexrowreversed {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: flex-end;
+
+h1~.finish-header {
+    color: #ededfc;
+    font-size: 400%;
+    font-weight: bold;
+    padding-bottom: 0;
 }
-.nodecoration {
-  text-decoration: none;
+
+h2 {
+    color: #1b1b70;
+    font-size: 400%;
 }
-.left_column {
-  display: flex;
-  flex-direction: column;
-  padding-left: 30px;
-  box-sizing: border-box;
+
+h3 {
+    color: #ededfc;
+    font-size: 170%;
 }
-nav.left_column {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 100px;
-  border-bottom: 3px solid #a674ff;
-  margin-bottom: 30px;
+
+h4 {
+    color: #c7c7e9;
+    font-size: 130%;
+    padding-bottom: 1vh;
 }
-.right_column {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding-left: 30px;
+
+p {
+    font-size: 120%;
+    line-height: 130%;
+    padding-bottom: 1vh;
 }
-.showcase {
-  display: flex;
-  flex-direction: column;
-}
-/* Selects Header Links */
-nav>a {
-  text-decoration: none;
-  margin-bottom: .5em;
-}
-/* Selects Link to Current Page */
-a.current {
-  color: #a674ff;
-}
-.more_link {
-  font-size: 1.25rem;
-  text-decoration: underline;
-}
-/* Selects Dashes */
-div.dash {
-  width: 50px;
-  height: 4px;
-  background-color:#a674ff;
-  margin-top: 10px;
-  margin-bottom: 30px;
-}
-div.dash.white {
-  background-color:#ffffff;
-}
-.showcase .work {
-  margin-bottom: 60px;
-}
-.showcase .work .photodiv {
-  height: 65vh;
-  display: block;
-  margin-bottom: 7px;
-}
-.showcase .work .photo {
-  height: 100%;
-}
-.contact_social {
-  margin-top: 25px;
-  margin-bottom: 15px;
-}
-.contact_social_icon {
-  height: 90px;
-  width: 90px;
-  margin-right: 15px;
-}
-/* Select Github Embedded Elements */
-#github_embed {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.github_repo_container {
-  border: 2px solid #000000;
-  padding: 10px;
-  padding-right: 25px;
-  max-width: 500px;
-  overflow: hidden;
-  word-wrap: break-word;
-  margin-bottom: 20px;
-}
-.github_repo_fullname {
-  font-style:italic;
-  text-decoration: underline;
-}
-.github_repo_container h3 {
-  display:inline-block;
-  color: #a674ff;
-  margin-bottom: 0px;
-}
-.github_repo_container h4 {
-  margin-bottom: 0px;
-}
-.github_repo_container p {
-  display:inline-block;
-}
-/* Selects Title Under Name */
-h2#mytitle {
-  color: #a674ff;
-}
-#myphoto {
-  height: 500px;
-}
-#about .right_column {
-  padding-right: 30px;
-}
-.project_photo {
-  height: 65vh;
-  margin-bottom: 30px;
-}
-.project_about {
-  padding-right: 30px;
-}
-section .right_column {
-  text-align:center;
-}
-@media only screen and (min-device-width: 1024px) and (min-width: 565px) {
-  html {
-    font-size: 16px;
-  }
-  ul {
-    list-style-type: initial;
-  }
-  .flexrow {
-    flex-direction: row;
-  }
-  .flexrowreversed {
-    flex-direction: row-reverse;
-  }
-  .left_column {
-    width: 200px;
-  }
-  nav.left_column {
-    flex-direction: column;
-    justify-content: initial;
-    align-items: initial;
-    height: initial;
-    border-bottom: none;
-    margin-bottom: initial;
-  }
-  .right_column {
-    padding-left: 0px;
-    padding-right: 125px;
-  }
-  .showcase {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .row {
+
+ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-  .desc {
-    margin-top: 0px;
-  }
-  /* Selects Dashes */
-  div.dash {
-    width: 35px;
-    height: 4px;
-    margin-bottom: 10px;
-    margin-top: initial;
-  }
-  /* Selects Main Page Sections */
-  body>section {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  .showcase .work {
+    width: 60%;
+    list-style: none;
+    padding-bottom: 1vh;
+}
+
+li {
+    font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    font-size: 130%;
+    margin-right: 2vw;
+    flex: 0 0 auto;
+}
+
+li::before {
+    content: '>';
+    padding-right: 0.5vw;
+    font-weight: bold;
+    font-size: 100%;
+    color: #1b1b70;
+}
+
+span.hex {
+    color: #1b1b70;
+}
+
+a {
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a.button {
+    border: .3vh solid #c7c7e9;
+    border-radius: .7vh;
+    text-decoration: none;
+    padding: 1.5vh 1vw 1.5vh 1vw;
+    font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    text-align: center;
+    flex: 0 0 auto;
+    width: max-content;
+    margin: 1vh 1vw 1vh 1vw;
+}
+
+a.button:hover {
+    border: .3vh solid #ededfc;
+    color: #ededfc;
+    background-color: #1b1b70;
+    box-shadow: 5px 5px 3px 0px #01010e;
+}
+
+a#NCR {
+    text-decoration: none;
+    display: inline-flex;
+    vertical-align: -21%;
+    border-bottom: .4vh solid #c7c7e9;
+    font-weight: bold;
+    padding-bottom: .2vh;
+}
+a#NCR .ncr-logo path {
+    fill:#c7c7e9;
+    fill-opacity:1;
+    fill-rule:nonzero;
+}
+
+a#NCR:hover {
+    color: #ededfc;
+    border-bottom: .4vh solid #ededfc;
+}
+
+a#NCR:hover .ncr-logo path {
+    fill:#ededfc;
+}
+
+
+a#NCR img {
+    padding-right: .08vw;
+}
+
+#x00 {
+    min-height: 100vh;
+}
+
+#x00 h1 {
+    margin: 0;
+}
+
+#x00 p:not(.finish-header) {
+    line-height: 160%;
+}
+
+#x01 p {
+    width:70%;
+    padding-bottom: 2vh;
+}
+
+div.menu-parent {
+    display: flex;
+    flex-direction: row;
+}
+nav.menu {
     display: flex;
     flex-direction: column;
-    margin-right: 50px;
-    margin-bottom: 30px;
-  }
-  .title {
-    max-width: 90%;
-  }
-  .showcase .work .photodiv {
-    height: 65vh;
-    display: block;
-    margin-bottom: 7px;
-  }
-  .showcase .work .photo {
-    height: 100%;
-  }
-  .contact_social {
-    margin-top: 25px;
-  }
-  .contact_social_icon {
-    height: 55px;
-    width: 55px;
-    margin-right: 15px;
-  }
-  .profile {
+    flex-wrap: nowrap;
+    flex: 0 .6 auto;
+    width:auto;
+    font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    font-size: 130%;
+    padding-top: 3vh;
+}
+
+nav.menu a {
+    border-left: .2vw solid #c7c7e9;
+    color: #c7c7e9;
+    text-decoration: none;
+    padding: .5vh 1vw .5vh 1vw;
+    margin-right: 1.5vw;
+}
+
+nav.menu a:hover {
+    background-color: #1b1b70;
+    color: #ededfc;
+}
+
+div.menu-content ul {
+    width:100%;
+}
+
+div.menu-content ul li {
+    margin-right: 1vw;
+}
+
+div.menu-content div {
+    padding-top: 3vh;
     display: flex;
-  }
-  .titles {
-    align-self: center;
-  }
-  #myphoto {
-    height: 200px;
-  }
-  #about .right_column {
-    max-width: 520px;
-  }
-  .project_photo {
-    height: 65vh;
-    margin-right: 75px;
-    margin-bottom: initial;
-  }
-  .project_display {
+    flex-direction: column;
+}
+
+div.menu-content div div.buttons {
+    padding: 0;
     display: flex;
-  }
-  .project_about {
-    max-width: 450px;
-  }
-  section .right_column {
-    text-align:initial;
-  }
-  #github_embed {
-    align-items: flex-start;
     flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .github_repo_container {
-    margin-right: 30px;
-    margin-bottom: 30px;
-  }
+}
+
+div.buttons {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+div.buttons a:first-child {
+    margin-left: 0;
+}
+
+#x04 h1 {
+    margin: 0;
+}
+
+aside.socials {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    padding: 1vh 2vw 0vh 2vw;
+    align-items: center;
+}
+
+aside div.aside-line {
+    width: .1vw;
+    height: 17vh;
+    background-color: #c7c7e9;
+}
+
+aside.socials a {
+    margin-bottom: 3vh;
+}
+
+aside.socials a:hover svg {
+    stroke: #ededfc;
+    fill: #ededfc;
+}
+
+aside.socials svg {
+    width: 1.5vw;
 }
