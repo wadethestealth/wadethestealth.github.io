@@ -71,8 +71,16 @@ header nav a {
     font-weight: bold;
     font-size: 120%;
     padding: 0vh 1vw 0vh 1vw;
-    color: #ededfc;
+    color: #c7c7e9;
     text-decoration: none;
+}
+
+header nav a:hover {
+    color: #ededfc;
+}
+
+header nav a:hover span.hex {
+    color: #2e2ebb;
 }
 
 footer {
@@ -304,6 +312,33 @@ aside.socials a:hover svg {
     fill: #ededfc;
 }
 
+aside a:hover~div.aside-line {
+    width: .18vw;
+}
+
 aside.socials svg {
     width: 1.5vw;
+}
+
+aside.resume #resume {
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    margin-bottom: 3vh;
+    text-decoration: none;
+}
+
+aside.resume {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+    display: flex;
+    width: 1em;
+    flex-direction: column;
+    padding: 1vh 2vw 0vh 2vw;
+    align-items: center;
+}
+
+aside.resume a:hover {
+    color: #ededfc;
 }
