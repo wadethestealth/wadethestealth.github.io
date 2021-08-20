@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script>
+            //https://generativeartistry.com/tutorials/tiled-lines/
+
+            window.onload = function() {
+                const canvas = document.querySelector('canvas');
+                const context = canvas.getContext('2d');
+
+                const minsize = window.innerWidth <= window.innerHeight ? window.innerWidth : window.innerHeight;
+                const step = 30;
+                const dpr = window.devicePixelRatio;
+                canvas.width = window.innerWidth * dpr;
+                canvas.height = window.innerHeight * dpr;
+                context.scale(dpr, dpr);
+
+                context.lineCap = 'square';
+                context.lineWidth = 2;
+
+                function draw(x, y, width, height) {
+                    const leftToRight = Math.random() >= 0.5;
+
+                    if(leftToRight) {
+                    context.moveTo(x, y);
+                    context.lineTo(x + width, y + height);    
+                    } else {
+                    context.moveTo(x + width, y);
+                    context.lineTo(x, y + height);
+                    }
+
+                    context.stroke();
+                    
+                }
+
+                for(let x = 0; x < window.innerWidth; x += step) {
+                    for(let y = 0; y < window.innerHeight; y+= step) {
+                        draw(x, y, step, step);    
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <style>
+            * {
+                margin: 0;
+            }
+        </style>
+        <canvas></canvas>
+    </body>
+</html>
