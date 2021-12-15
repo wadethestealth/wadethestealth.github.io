@@ -1,0 +1,210 @@
+@font-face {
+    font-family: "Fira Code";
+    src: url(FiraCode-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Fira Code";
+    src: url(FiraCode-Regular.ttf);
+    font-weight: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 15px;
+    background-color: #0a0a0a;
+    color: #c7c7e9;
+    font-family: "Calibre", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+}
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.button-row .branch-dropdown {
+    display: flex;
+    flex-direction: row;
+    background-color: #9c9cb6;
+    color: #333333;
+    border-radius: 13px;
+    padding: 10px 10px 10px 10px;
+    margin-right: 10px;
+}
+
+.button-row .branch-dropdown .branch-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #333333;    
+    margin-right: 5px;
+}
+
+.button-row .branch-dropdown .name {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.button-row .branch-counter {
+    display: flex;
+    flex-direction: row;
+    color: #4a4a4a;
+}
+
+.button-row .branch-counter .branch-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #c7c7e9;
+    margin-right: 5px;
+}
+
+.button-row .branch-counter .count {
+    font-weight: bold;
+    color: #c7c7e9;
+    margin-right: 5px;
+}
+
+.button-row .resume-dropdown {
+    display: flex;
+    flex-direction: row;
+    background-color: #333399;
+    color: #c7c7e9;
+    border-radius: 13px;
+    padding: 10px 10px 10px 10px;
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+.button-row .resume-dropdown .resume-text {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.file-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #c7c7e9;
+    border-radius: 13px;
+    overflow: hidden;
+    width: 1000px;
+}
+
+.file-list .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9c9cb6;
+    font-size: large;
+    color: #2a2a2a;
+    padding: 10px 10px 10px 10px;
+}
+
+.file-list .header .avatar {
+    background-color: #4a4a4a;
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    flex-shrink: 0;
+}
+.file-list .header .name {
+    font-weight: bold;
+    margin-right: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.file-list .header .last-update {
+    color: #333333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-list .header .checkmark-icon {
+    margin-right: 5px;
+    margin-left: auto;
+    background-color: #4a4a4a;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    flex-shrink: 0;
+}
+
+.file-list .header .update-date {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-list .files {
+    display: flex;
+    flex-direction: column;
+}
+
+.file-list .files .file {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #c7c7e9;
+    padding: 10px 10px 10px 10px;
+}
+
+.file-list .files .file:hover {
+    background-color: #1f1f1f;
+}
+
+.file-list .files .file .file-icon {
+    background-color: #c7c7e9;
+    width: 20px;
+    height: 23px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.file-list .files .file .name {
+    box-sizing: border-box;
+    width: 40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.file-list .files .file:hover .name {
+    text-decoration: underline;
+}
+
+.file-list .files .file .description {
+    color: #444444;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-list .files .file .clock-icon {
+    margin-right: 10px;
+    margin-left: auto;
+    background-color: #c7c7e9;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    flex-shrink: 0;
+}
+
+.file-list .files .file .time-ago {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+}
+
