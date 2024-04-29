@@ -1,12 +1,24 @@
 @font-face {
     font-family: "Fira Code";
-    src: url(FiraCode-Bold.ttf);
+    src: url(fonts/FiraCode-Bold.ttf);
     font-weight: bold;
 }
 
 @font-face {
     font-family: "Fira Code";
-    src: url(FiraCode-Regular.ttf);
+    src: url(fonts/FiraCode-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Staatliches";
+    src: url(fonts/Staatliches-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Sigmar One";
+    src: url(fonts/SigmarOne-Regular.ttf);
     font-weight: normal;
 }
 
@@ -15,9 +27,63 @@
     margin: 0;
 }
 
+body.light, body.light .floater.inverse, body.light #about #screen  {
+    background-color: #efefef;
+    color:#121212;
+}
+
+body.light #about #interactive {
+    background-color: #dfdfdf;
+}
+
+body.light #about, body.light #community {
+    background-color: #e6e6e6;
+}
+
+body.light #about #interactive, body.light #about #interactive #screen, body.light #about #interactive #taskbar {
+    border-color: #bbbbbb;
+}
+
+body.light aside.socials a:hover svg {
+    stroke: #121212;
+    fill: #121212;
+}
+
+body.dark, body.dark .floater.inverse, body.dark #about #screen, body.light .floater, body.light .transition-border, body.light footer {
+    background-color: #121212;
+    color:#efefef;
+}
+
+body.dark #about #interactive {
+    background-color: #222222;
+}
+
+body.dark #about, body.dark #community {
+    background-color: #191919;
+}
+
+body.dark #about #interactive, body.dark #about #interactive #screen, body.dark #about #interactive #taskbar {
+    border-color: #444444;
+}
+
+body.dark aside.socials a:hover svg {
+    stroke: #dfdfdf;
+    fill: #dfdfdf;
+}
+
+body.dark aside.socials a svg {
+    color: #dfdfdf;
+}
+
+body.dark .floater, body.dark .transition-border, body.dark footer {
+    background-color: #191919;
+    color: #efefef;
+}
+
 body {
-    background-color: #070720;
-    color: #c7c7e9;
+    background-color: #ffffff;
+    max-width: 1920px;
+    color:#121212;
     font-family: "Calibre", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
 }
 
@@ -26,8 +92,6 @@ main {
     flex-direction: column;
     align-items: center;
     position: relative;
-
-    margin-top: -8vh;
 }
 
 section {
@@ -35,10 +99,168 @@ section {
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
+    margin: 0 100px;
+    padding: 3vh 2.5vw 12vh 2.5vw;
+}
 
-    width: 50vw;
-    min-height: 100vh;
-    padding: 5vh 0vw 5vh 0vw;
+.row-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.right-poly {
+    clip-path: polygon(0% 0%, 100% 4%, 100% 100%, 0% 96%);
+}
+
+.left-poly {
+    clip-path: polygon(0% 3%, 100% 0%, 100% 96%, 0% 100%);
+}
+
+.art {
+    width: 375px;
+    height: 375px;
+}
+
+#intro {
+    max-width: 1920px;
+    width: 100%;
+    height: 590px;
+    display: block;
+    padding: 0 0 4vh 0;
+    overflow: hidden;
+}
+
+#intro .background {
+    position: relative;
+    transform-origin: top left;
+    transform: rotate(-90deg);
+    width: 590px;
+    height: 100vw;
+    font-family: "Sigmar One", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    font-size: 128px;
+    line-height: 110px;
+    font-weight: bold;
+    word-break: break-all;
+    opacity: .07;
+}
+
+#intro .text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: "Staatliches", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}
+
+#intro .text h1 {
+    font-size: 64px;
+}
+
+#intro .text h2 {
+    font-size: 28px;
+}
+
+#about p {
+    font-size: 36px;
+}
+
+#about .row-container .wide {
+    flex-grow: 1;
+    width: 50%;
+}
+
+#interactive {
+    flex-shrink: 0;
+    width: 475px;
+    height: 360px;
+    border: 3px solid;
+    border-radius: 11px;
+    margin: 5% 3%;
+    padding: 20px;
+}
+
+#screen {
+    box-sizing: border-box;
+    border: 3px solid;
+    border-radius: 11px;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#desktop {
+    flex-grow: 1;
+}
+
+#taskbar {
+    margin-top: 9px;
+    box-sizing: border-box;
+    border-top: 3px solid;
+    width: 100%;
+    height: 10px;
+}
+
+#work .row-container.reverse .art {
+    margin-left: 50px;
+}
+
+#work .row-container h1 {
+    font-size: 36px;
+}
+
+#work .row-container h2 {
+    font-size: 24px;
+}
+
+#work .row-container h3 {
+    font-size: 20px;
+}
+
+#work p {
+    font-size: 20px;
+}
+
+#work .buttons {
+    margin-top: 10px;
+}
+
+#work > h1, #community > h1 {
+    margin-bottom: 40px;
+}
+
+#work .row-container .wide, #community .row-container .wide {
+    flex-grow: 1;
+    width: 50%;
+}
+
+#work .row-container .art, #community .row-container .art {
+    margin-right: 50px;
+    margin-bottom: 25px;
+}
+
+#community p {
+    font-size: 20px;
 }
 
 header {
@@ -48,13 +270,15 @@ header {
     align-items: center;
     box-sizing: border-box;
     position: fixed;
-    margin-top: 8vh;
-    box-shadow: 0px 1px 3px 0px #030313;
 
-    background-color: #070720;
     z-index: 100001;
     width: 100%;
-    padding: 3vh 5vw 3vh 5vw;
+    padding: 3vh 5vw 0vh 5vw;
+}
+
+header .logo {
+    font-size: 32px;
+    font-weight: bold;
 }
 
 header nav {
@@ -71,86 +295,52 @@ header nav a {
     font-weight: bold;
     font-size: 120%;
     padding: 0vh 1vw 0vh 1vw;
-    color: #c7c7e9;
+    margin: 0vh 1vw 0vh 1vw;
     text-decoration: none;
 }
 
-header nav a:hover {
-    color: #ededfc;
-}
-
-header nav a:hover span.hex {
-    color: #2e2ebb;
-}
-
 footer {
-    padding: 3vh 5vw 3vh 5vw;
-    box-shadow: 0px -1px 3px 0px #030313;
+    position: relative;
+    z-index: 10;
+    padding: 10px 100px 50px 100px; 
     text-align: center;
 }
 
-h1 {
-    font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-    color: #ededfc;
-    font-size: 150%;
-    margin-bottom: 2vh;
+footer h1 {
+    padding: 30px 0px 60px 0px;
 }
 
-h1~.finish-header {
-    color: #ededfc;
-    font-size: 400%;
-    font-weight: bold;
-    padding-bottom: 0;
+footer h2 {
+    margin-left: 7px;
+    text-align: left;
+}
+
+footer div:last-child {
+    display: flex;
+    border-top: 2px solid;
+    padding-top: 7px;
+}
+
+footer div:last-child p {
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 48px;
 }
 
 h2 {
-    color: #1b1b70;
-    font-size: 400%;
+    font-size: 28px;
 }
 
 h3 {
-    color: #ededfc;
-    font-size: 170%;
+    font-size: 20px;
 }
 
 h4 {
     color: #c7c7e9;
     font-size: 130%;
     padding-bottom: 1vh;
-}
-
-p {
-    font-size: 120%;
-    line-height: 130%;
-    padding-bottom: 1vh;
-}
-
-ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 60%;
-    list-style: none;
-    padding-bottom: 1vh;
-}
-
-li {
-    font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-    font-size: 130%;
-    margin-right: 2vw;
-    flex: 0 0 auto;
-}
-
-li::before {
-    content: '>';
-    padding-right: 0.5vw;
-    font-weight: bold;
-    font-size: 100%;
-    color: #1b1b70;
-}
-
-span.hex {
-    color: #1b1b70;
 }
 
 a {
@@ -162,10 +352,13 @@ a:visited {
 }
 
 a.button {
-    border: .3vh solid #c7c7e9;
-    border-radius: .7vh;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid;
+    border-radius: 8px;
     text-decoration: none;
-    padding: 1.5vh 1vw 1.5vh 1vw;
+    padding: 5px 20px;
     font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
     text-align: center;
     flex: 0 0 auto;
@@ -173,172 +366,97 @@ a.button {
     margin: 1vh 1vw 1vh 1vw;
 }
 
-a.button:hover {
-    border: .3vh solid #ededfc;
-    color: #ededfc;
-    background-color: #1b1b70;
-    box-shadow: 5px 5px 3px 0px #01010e;
-}
-
-a#NCR {
-    text-decoration: none;
-    display: inline-flex;
-    vertical-align: -21%;
-    border-bottom: .4vh solid #c7c7e9;
-    font-weight: bold;
-    padding-bottom: .2vh;
-}
-a#NCR .ncr-logo path {
-    fill:#c7c7e9;
-    fill-opacity:1;
-    fill-rule:nonzero;
-}
-
-a#NCR:hover {
-    color: #ededfc;
-    border-bottom: .4vh solid #ededfc;
-}
-
-a#NCR:hover .ncr-logo path {
-    fill:#ededfc;
-}
-
-
-a#NCR img {
-    padding-right: .08vw;
-}
-
-#x00 {
-    min-height: 100vh;
-}
-
-#x00 h1 {
-    margin: 0;
-}
-
-#x00 p:not(.finish-header) {
-    line-height: 160%;
-}
-
-#x01 p {
-    width:70%;
-    padding-bottom: 2vh;
-}
-
-div.menu-parent {
-    display: flex;
-    flex-direction: row;
-}
-nav.menu {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    flex: 0 .6 auto;
-    width:auto;
-    font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-    font-size: 130%;
-    padding-top: 3vh;
-}
-
-nav.menu a {
-    border-left: .2vw solid #c7c7e9;
-    color: #c7c7e9;
-    text-decoration: none;
-    padding: .5vh 1vw .5vh 1vw;
-    margin-right: 1.5vw;
-}
-
-nav.menu a:hover {
-    background-color: #1b1b70;
-    color: #ededfc;
-}
-
-div.menu-content ul {
-    width:100%;
-}
-
-div.menu-content ul li {
-    margin-right: 1vw;
-}
-
-div.menu-content div {
-    padding-top: 3vh;
-    display: flex;
-    flex-direction: column;
-}
-
-div.menu-content div div.buttons {
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-}
-
-div.buttons {
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-}
-div.buttons a:first-child {
+a.button:first-child {
     margin-left: 0;
-}
-
-#x04 h1 {
-    margin: 0;
 }
 
 aside.socials {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 10000;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     padding: 1vh 2vw 0vh 2vw;
     align-items: center;
-}
-
-aside div.aside-line {
-    width: .1vw;
-    height: 17vh;
-    background-color: #c7c7e9;
 }
 
 aside.socials a {
     margin-bottom: 3vh;
 }
 
-aside.socials a:hover svg {
-    stroke: #ededfc;
-    fill: #ededfc;
-}
-
-aside a:hover~div.aside-line {
-    width: .18vw;
-}
-
 aside.socials svg {
     width: 1.5vw;
 }
 
-aside.resume #resume {
-    font-weight: bold;
-    writing-mode: vertical-rl;
-    margin-bottom: 3vh;
-    text-decoration: none;
+footer .socials {
+    padding-left: 5px;
 }
 
-aside.resume {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    z-index: 10000;
-    display: flex;
-    width: 1em;
-    flex-direction: column;
-    padding: 1vh 2vw 0vh 2vw;
-    align-items: center;
+footer .socials svg {
+    width: 1.2vw;
 }
 
-aside.resume a:hover {
-    color: #ededfc;
+footer .socials a {
+    margin-right: 5px;
+}
+
+.floater {
+    position: relative;
+    z-index: 10;
+    width: 3.45%;
+    padding-top: 3.45%; /* 1:1 aspect */
+}
+
+#floater-1 {
+    margin-top: -17.24%;
+    left: 3.45%;
+}
+
+#floater-2 {
+    margin-top: 0;
+    left: 31.03%;
+}
+
+#floater-3 {
+    margin-top: -6.9%;
+    left: 65.52%;
+}
+
+#floater-4 {
+    margin-top: -3.45%;
+    left: 93.1%;
+}
+
+#floater-5 {
+    margin-top: 6.9%;
+    left: 44.81%;
+}
+
+#floater-6 {
+    margin-top: -3.45%;
+    left: 75.86%;
+}
+
+.transition-border {
+    position: relative;
+    z-index: 10;
+    padding-bottom: 17.24%;
+    width: 100%;
+    clip-path: polygon(0% 40%, 3.45% 40%, 3.45% 60%, 10.34% 60%, 10.34% 80%, 13.79% 80%, 13.79% 40%, 20.69% 40%, 20.69% 20%, 24.14% 20%, 24.14% 60%, 34.48% 60%, 34.48% 40%, 48.27% 40%, 48.27% 60%, 58.62% 60%, 58.62% 40%, 68.97% 40%, 68.97% 60%, 72.41% 60%, 72.41% 40%, 79.31% 40%, 79.31% 60%, 83% 60%, 83% 20%, 86.50% 20%, 86.50% 40%, 96.55% 40%, 96.55% 60%, 100% 60%, 100% 100%, 0px 100%);
+}
+
+.transition {
+    padding-top: 25px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.flip {
+    display: inline-block;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
 }

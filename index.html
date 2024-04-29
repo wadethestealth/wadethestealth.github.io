@@ -2,218 +2,130 @@
 <html lang="en-US">
 	<head>
 		<link rel='stylesheet' type='text/css' href="styles.css">
-    <script src="lib.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="scripts/main.js"></script>
 	</head>
-	<body>
+	<body class="dark">
 		<header id="header">
-      <p>TWD</p>
-      <nav>
-        <a href="#x00"><span class="hex">x00</span> Hello</a>
-        <a href="#x01"><span class="hex">x01</span> About</a>
-        <a href="#x02"><span class="hex">x02</span> Experience</a>
-        <a href="#x03"><span class="hex">x03</span> Projects</a>
-        <a href="#x04"><span class="hex">x04</span> Contact</a>
-      </nav>
     </header>
     <main>
-      <section id="x00">
-        <h1><span class="hex">x00</span> Hi, my name is</h1>
-        <p class="finish-header">Thomas Wade Denton III.</p>
-        <h2>I create with code.</h2>
-        <p>I'm a software engineer, who specializes in developing unique and user-friendly applications.<br/>I last interned at 
-          <a id="NCR" href="https://www.ncr.com/">
-            <svg
-              xmlns:dc="http://purl.org/dc/elements/1.1/"
-              xmlns:cc="http://creativecommons.org/ns#"
-              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-              xmlns:svg="http://www.w3.org/2000/svg"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-              xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-              width="11mm"
-              height="7.3mm"
-              viewBox="0 0 11.65675 5.65674"
-              version="1.1"
-              id="svg9078"
-              inkscape:version="0.92.0 r15299"
-              sodipodi:docname="ncr.svg">
-              <g
-                  inkscape:label="Layer 1"
-                  inkscape:groupmode="layer"
-                  id="layer1"
-                  transform="translate(-40.3,-210.5)">
-                <g class="ncr-logo">
-                  <path
-                      d="m 47.323802,211.2207 0.81739,0.77011 c -0.0219,0.01 -0.0476,0.0219 -0.078,0.0374 -0.0469,0.0243 -0.10371,0.0575 -0.1711,0.10407 -0.13476,0.0931 -0.31079,0.24059 -0.53551,0.4833 l -1.59703,1.69051 c -0.2741,0.28928 -0.55245,0.51859 -0.81139,0.63959 l -0.81738,-0.76976 c 0.0222,-0.0102 0.0483,-0.0222 0.0776,-0.0381 0.0473,-0.0236 0.10407,-0.0571 0.17145,-0.10407 0.13441,-0.0928 0.3108,-0.23989 0.53516,-0.4826 l 1.59703,-1.68804 c 0.27411,-0.28928 0.5528,-0.52105 0.81174,-0.64241"
-                      style="stroke:none;stroke-width:0.35277778"
-                      id="path8640"
-                      inkscape:connector-curvature="0" />
-                  <path
-                      d="m 44.159562,215.30773 c 0.3616,0 0.69356,-0.072 0.91899,-0.18874 0.10265,-0.0536 0.24976,-0.1464 0.37641,-0.24447 0.12594,-0.0984 0.30409,-0.25153 0.45544,-0.41205 l 1.59949,-1.68557 c 0.40287,-0.42509 0.64558,-0.55598 0.79234,-0.60748 l 0.82056,0.77646 c -0.17145,0.18345 -2.21262,2.35762 -2.21262,2.35762 -0.1397,0.15028 -0.2861,0.29492 -0.38559,0.38664 -0.0956,0.0885 -0.25964,0.21978 -0.34431,0.28187 -0.48013,0.35172 -1.12148,0.63712 -1.98543,0.63712 -1.95651,0 -3.53942,-1.59315 -3.53942,-3.42689 0,-2.27541 1.77765,-3.59551 3.39725,-3.59551 0.496,-0.0148 0.89429,0.0684 1.20861,0.17569 0.2914,0.0988 0.51118,0.21837 0.67028,0.29986 -0.18803,0.121 -0.37041,0.28504 -0.67133,0.60642 l -0.32773,0.35243 c -0.0755,-0.0289 -0.41064,-0.14535 -0.84103,-0.13265 -1.03857,0.0307 -2.17487,0.87313 -2.13395,2.25425 0.0381,1.29188 1.10314,2.165 2.20204,2.165"
-                      style="stroke:none;stroke-width:0.35277778"
-                      id="path8644"
-                      inkscape:connector-curvature="0" />
-                  <path
-                      d="m 47.183462,211.05927 c -0.10336,0.0536 -0.25047,0.14605 -0.37712,0.24447 -0.12594,0.0981 -0.30409,0.25118 -0.45544,0.4117 l -1.59878,1.68592 c -0.40358,0.42475 -0.64594,0.55563 -0.7927,0.60748 l -0.82056,-0.77646 c 0.17145,-0.18344 2.21263,-2.35761 2.21263,-2.35761 0.1397,-0.14993 0.2861,-0.29457 0.38558,-0.387 0.0956,-0.0882 0.25965,-0.21943 0.34467,-0.28152 0.47942,-0.35172 1.12183,-0.63711 1.98543,-0.63711 1.95686,0 3.53906,1.59244 3.53906,3.42653 0,2.27577 -1.77764,3.59551 -3.39725,3.59551 -0.496,0.0148 -0.89429,-0.0688 -1.20896,-0.17569 -0.29175,-0.0991 -0.51188,-0.21907 -0.67134,-0.30056 0.19897,-0.13406 0.36971,-0.28187 0.67275,-0.60537 l 0.32773,-0.35242 c 0.0755,0.0286 0.41063,0.14534 0.84067,0.13299 1.03893,-0.031 2.17522,-0.87383 2.1343,-2.25495 -0.0385,-1.29152 -1.10384,-2.16465 -2.20239,-2.16465 -0.36195,0 -0.69286,0.0716 -0.91828,0.18874"
-                      style="stroke:none;stroke-width:0.35277778"
-                      id="path8648"
-                      inkscape:connector-curvature="0" />
-                </g>
-              </g>
-            </svg> NCR
-          </a> on the Business Services Platform team.</p>
+      <section id="intro">
+        <div class="text">
+          <h1>THOMAS WADE</h1>
+          <h2>BLENDING DIGITAL, DIVERSE, DYNAMIC</h2>
+        </div>
+        <div class="background">
+          <span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span><span>THOMASWADE</span>
+        </div>
       </section>
-      <section id="x01">
-        <h1><span class="hex">x01</span> I started coding back in 2010.</h1>
-        <p>
-          My interest for software development first began to sprout at 10 years old, when I decided to mod a very popular block game you may know as Minecraft. 
-          Learning Java from a textbook was quite the task for the young me, but with help from my father, who was once also a software engineer, I found success.
-          I soon moved on to small python games, and then began my journey into web development at 13, where I eventually won Web Design State Champion at 18.
-        </p>
-        <p>
-          Now, as a 4th year in Computer Science at Georgia Tech, I specialize in artificial intelligence and theory, and I enjoy competitive programming.
-          Throughout my course work, I have gained both experience and familarity with Assembly, C, C++, Matlab, Python, and Java.
-          However to date, my favorite language is still Javascript.
-        </p>
-        <p>When I am not programming, you can probably catch me doing one of the following activities:</p>
-        <ul>
-          <li>Climbing</li>
-          <li>Travelling</li>
-          <li>Video Gaming Competitively</li>
-          <li>Trying New Foods or Restaurants</li>
-          <li>Cooking</li>
-        </ul>
-      </section>
-      <section id="x02">
-        <h1><span class="hex">x02</span> I have had the pleasure of working for</h1>
-        <div class="menu-parent">
-          <nav class="menu">
-            <a href="#x0201">NCR</a>
-            <a href="#x0202">NCR</a>
-            <a href="#x0203">Georgia Tech LIDAR Lab</a>
-            <a href="#x0204">Auburn University AUSSP</a>
-          </nav>
-          <div class="menu-content">
-            <div id="x0201">
-              <h3>Software Engineer Intern <span class="worked-at">@ NCR</span></h3>
-              <h4>May 2021 - August 2021</h4>
-              <p>I had an opportunity to return to NCR, on the Business Services Platform team, leading and managing a team of 3 other junior interns, where we created a full-stack application to help vaccination centers run smoothly.</p>
-              <ul>
-                <li>Javascript</li>
-                <li>React</li>
-                <li>Express Js</li>
-                <li>Node Package Manager</li>
-                <li>Html</li>
-                <li>Css</li>
-              </ul>
-            </div>
-            <div id="x0202">
-              <h3>Software Engineer Intern <span class="worked-at">@ NCR</span></h3>
-              <h4>May 2020 - August 2020</h4>
-              <p>I had the opportunity to work on the Data Privacy team at NCR, where I designed wireframes and created the front-end for a customer facing application that helps customers manage consumer data.</p>
-              <ul>
-                <li>Javascript</li>
-                <li>React</li>
-                <li>Node Package Manager</li>
-                <li>Html</li>
-                <li>Css</li>
-              </ul>
-            </div>
-            <div id="x0203">
-              <h3>Undergraduate Researcher <span class="worked-at">@ LIDAR</span></h3>
-              <h4>January 2021 - Present</h4>
-              <p>I currently have the opportunity to work in the LIDAR Lab, where I create low level simulations and simulation software for a quadruped robot named A1.</p>
-              <ul>
-                <li>Python</li>
-                <li>PyBullet</li>
-              </ul>
-            </div>
-            <div id="x0204">
-              <h3>Undergraduate Researcher <span class="worked-at">@ AUSSP</span></h3>
-              <h4>Feburary 2019 - March 2020</h4>
-              <p>I previously had the opportunity to work for Auburn University's Small Satellite Program, where I created a fullstack prototype website that was in control of sending, recieving, and displaying data from a cube satellite.</p>
-              <ul>
-                <li>Javascript</li>
-                <li>MySql</li>
-                <li>Html</li>
-                <li>Css</li>
-              </ul>
+      <section id="about" class="right-poly">
+        <h1>About Me</h1>
+        <div class="row-container">
+          <div class="wide">
+            <p>Hi, my name is Thomas Wade 👋!</p>
+            <br />
+            <p>I’m a software engineer, who’s passionate about globally transforming lives through user-centric solutions to real-world problems.</p>
+            <br />
+            <p>I specialize in <span class="underline">Full-stack Web/Desktop Application Development</span> and <span class="underline">Machine Learning</span>.</p>
+            <br />
+            <p>When I’m not developing, however, you can catch me <span class="underline">traveling ✈️</span>, <span class="underline">snowboarding 🏂</span>, <span class="underline">creating art 🎨🖌️</span>, or <span class="underline">playing games 🎮</span>.</p>
+          </div>
+          <div id="interactive">
+            <div id="screen">
+              <div id="desktop"></div>
+              <div id="taskbar"></div>
             </div>
           </div>
         </div>
       </section>
-      <section id="x03">
-        <h1><span class="hex">x03</span> I have contributed to making</h1>
-        <div class="menu-parent">
-          <nav class="menu">
-            <a href="#x0301">CS 2340 Dungeon Crawler</a>
-            <a href="#x0302">Hydrogen</a>
-            <a href="#x0303">Atom Github</a>
-          </nav>
-          <div class="menu-content">
-            <div id="x0301">
-              <h3>Tech Lead <span class="worked-at">@ Dungeon Crawler</span></h3>
-              <h4>January 2021 - May 2021</h4>
-              <p>I and 3 of my peers worked on creating a dungeon crawler videogame in my CS 2340 class at Georgia Tech.</p>
-              <ul>
-                <li>Java</li>
-                <li>JavaFx</li>
-                <li>JUnit</li>
-                <li>TestFx</li>
-              </ul>
+      <section id="work">
+        <h1>Recent Work</h1>
+        <div class="row-container">
+          <img class="art" src="assets/images/vibrations i.png"/>
+          <div class="wide">
+            <h3>2022 ~ Present</h3>
+            <h1>Google - YouTube Live</h1>
+            <h2>Software Engineer</h2>
+            <br />
+            <p class="bold">Lead engineer of moderation features and of desktop surfaces for Live Interactivity.</p>
+            <br />
+            <p>Key Technical Skills: C++ (Cpp), TypeScript (TS), JavaScript (JS), Python (Py), HTML, Sass (SCSS), MySQL (SQL), JSON, Java, Objective-C (Obj-C), Version Control (VCS, Git), Machine Learning, Frontend, Backend, Full-Stack, Web Application, Website Development, UI/UX, Software Architecture, Data Privacy, Data Analysis, Logging/Metrics, Unit/Integration Testing, Documentation</p>
+            <div class="buttons">
+              <a class="button" href="assets/files/Thomas Denton Resume.pdf" target="_blank">Resume 🔗</a>
+              <a class="button" href="mailto:wadeuk3@gmail.com" target="_blank">Contact Me ✏️</a>
             </div>
-            <div id="x0302">
-              <h3>Contributor and Maintainer <span class="worked-at">@ Hydrogen</span></h3>
-              <h4>May 2019 - Present</h4>
-              <p>I am currently a contributor and maintainer of nteract/hydrogen on Github.</p>
-              <ul>
-                <li>Javascript</li>
-                <li>React</li>
-                <li>Jasmine</li>
-                <li>Electron</li>
-                <li>Node Package Manager</li>
-                <li>Html</li>
-                <li>Less</li>
-              </ul>
-              <div class="buttons">
-                <a href="https://github.com/nteract/hydrogen/pulls?q=author%3Awadethestealth+is%3Amerged" class="button">See My Work</a>
-                <a href="https://github.com/nteract/hydrogen/" class="button">View Repo</a>
-              </div>
-            </div>
-            <div id="x0303">
-              <h3>Contributor <span class="worked-at">@ Atom Github</span></h3>
-              <h4>October 2019 - January 2020</h4>
-              <p>I got to fix bugs and create new features for the Github integration of Atom.</p>
-              <ul>
-                <li>Javascript</li>
-                <li>React</li>
-                <li>Mocha</li>
-                <li>Chai</li>
-                <li>Electron</li>
-                <li>Node Package Manager</li>
-                <li>Html</li>
-                <li>Less</li>
-              </ul>
-              <div class="buttons">
-                <a href="https://github.com/atom/github/pulls?q=author%3Awadethestealth+is%3Amerged" class="button">See My Work</a>
-                <a href="https://github.com/atom/github/" class="button">View Repo</a>
-              </div>
+          </div>
+        </div>
+        <div class="row-container reverse">
+          <img class="art" src="assets/images/vibrations ii.png"/>
+          <div class="wide">
+            <h3>2020 + 2021</h3>
+            <h1>NCR -  Business Services Platform + Data Privacy Team</h1>
+            <h2>Software Engineer Intern</h2>
+            <br />
+            <p class="bold">Lead engineer and manager for internal tooling with a team of 3 first-year interns. + Implemented GDPR and CCPA rules for internal privacy systems.</p>
+            <br />
+            <p>Key Technical Skills: TypeScript (TS), JavaScript (JS), HTML, Sass (SCSS), MySQL (SQL), Version Control (VCS, Git), Frontend, Backend, Full-Stack, Web Application, Website Development, UI/UX, Data Privacy</p>
+            <div class="buttons">
+              <a class="button" href="assets/files/Thomas Denton Resume.pdf" target="_blank">Resume 🔗</a>
+              <a class="button" href="mailto:wadeuk3@gmail.com" target="_blank">Contact Me ✏️</a>
             </div>
           </div>
         </div>
       </section>
-      <section id="x04">
-        <h1><span class="hex">x04</span> Here's how you can</h1>
-        <p class="finish-header">Contact me.</p>
-        <div class="buttons">
-          <a href="mailto:wadeuk3@gmail.com" class="button">Email</a>
-          <a href="https://www.linkedin.com/in/thomaswadedentoniii/" class="button">Linkedin</a>
-          <a href="https://github.com/wadethestealth" class="button">Github</a>
-        </div>      
+      <section id="community" class="left-poly">
+        <h1>Community Involvement</h1>
+        <div class="row-container">
+          <img class="art" src="assets/images/vibrations iii.png"/>
+          <div class="wide">
+            <p class="bold">Rocket League @ Google (December 2023 + April 2024)</p>
+            <p>Organized a 2 hour long tournament (social event) for ~30 Googlers and friends to foster connection and bring the community at Google closer together. 100% Satisfaction Score via post-event survey.</p>
+            <br />
+            <p class="bold">Boys and Girls Club @ Google (March 2023)</p>
+            <p>Volunteered to co-lead 2 all-day instruction sessions for ~20 high school students where we taught about Google and gave a hands-on introduction into Software Engineering.</p>
+            <br />
+            <p class="bold">Laboratory For Intelligent Decision and Autonomous Robots (LIDAR) @ Georgia Institute of Technology, GA (January 2021 – May 2022)</p>
+            <p>Operated as a Python Data Analyst and Simulation Engineer on A1 Quadruped Hardware Team. [https://lab-idar.gatech.edu/]</p>
+            <br />
+            <p class="bold">Association of Computing Machinery (ACM) @ Auburn University, AL (January 2019 – May 2020)</p>
+            <p>Founding Vice President of the Artificial Intelligence Club. Competed on the Competitive Programming Team in Java.</p>
+            <br />
+            <p class="bold">Auburn Small Satellite Program @ Auburn University, AL (February 2019 – May 2020)</p>
+            <p>Developed data querying and data visualization software for the Communications Software Team using PHP, MySQL, JS, HTML, and CSS.</p>
+            <br />
+          </div>
+        </div>
       </section>
+      <div class="transition">
+        <div class="transition-border"></div>
+        <div id="floater-1" class="floater"></div>
+        <div id="floater-2" class="floater"></div>
+        <div id="floater-3" class="floater"></div>
+        <div id="floater-4" class="floater"></div>
+        <div id="floater-5" class="floater inverse"></div>
+        <div id="floater-6" class="floater inverse"></div>
+      </div>
     </main>
     <footer>
-      <p>Designed by Thomas Denton ❤️</p>
+      <div>
+        <h1>Thanks for visting! Interested in sending a message?</h1>
+        <h2><span class="flip">⤵</span>Connect with me!</h2>
+      </div>
+      <div>
+        <div class="socials">
+          <a href="mailto:wadeuk3@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 480" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"></path></svg></a>
+          <a href="https://www.linkedin.com/in/thomaswadedentoniii/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          <a href="https://github.com/wadethestealth"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+        </div>
+        <p class="bold">Designed by Thomas Wade ❤️</p>
+      </div>
     </footer>
     <aside class="socials">
       <a href="https://github.com/wadethestealth">
@@ -225,11 +137,6 @@
       <a href="mailto:wadeuk3@gmail.com">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 479.058 479.058" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"></path></svg>
       </a>
-      <div class="aside-line"></div>
-    </aside>
-    <aside class="resume">
-      <a id="resume" href="Thomas Denton Resume.pdf" target="_blank">Want to see my resume?</a>
-      <div class="aside-line"></div>
     </aside>
 	</body>
 </html>
