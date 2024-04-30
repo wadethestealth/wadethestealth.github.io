@@ -237,6 +237,10 @@ section {
     font-size: 20px;
 }
 
+#work .row-container {
+    padding-bottom: 50px;
+}
+
 #work p {
     font-size: 20px;
 }
@@ -377,7 +381,7 @@ aside.socials {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    padding: 1vh 2vw 0vh 2vw;
+    width: 100px;
     align-items: center;
 }
 
@@ -386,7 +390,7 @@ aside.socials a {
 }
 
 aside.socials svg {
-    width: 1.5vw;
+    width: 28px;
 }
 
 footer .socials {
@@ -459,4 +463,17 @@ footer .socials a {
     -o-transform: scale(-1, 1);
     -ms-transform: scale(-1, 1);
     transform: scale(-1, 1);
+}
+
+@media only screen and (max-device-width: 500px) {
+    #intro .text h1 {
+        font-size: 120px;
+    }
+    aside.socials svg {
+        width: 50px;
+    }
+    #intro .text h2 {
+        font-size: 50px;
+        letter-spacing: 2px;
+    }
 }

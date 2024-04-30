@@ -7,12 +7,20 @@ import {fragmentShader} from './shaders/fragment.glsl.js';
 
 const desktop = document.getElementById("desktop");
 
-var cursor_x = -1;
-var cursor_y = -1;
-document.onmousemove = function(event)
-{
- cursor_x = event.clientX;
- cursor_y = event.clientY;
+var cameraX = -1;
+var cameraY = -1;
+
+document.onmousemove = function(event) {
+	cameraX = event.clientX;
+	cameraY = event.clientY;
+}
+
+document.ontouchmove = function(event) {
+	if (event.touches.length < 1) {
+		return;
+	}
+	cameraX = event.touches.item(0).clientX;
+	cameraY = event.touches.item(0).clientY;
 }
 
 const clock = new THREE.Clock();
@@ -59,8 +67,8 @@ function animate() {
 
 	blob.rotation.x += 0.002;
 	blob.rotation.y += 0.002;
-	camera.position.x = (cursor_x/window.innerWidth - 0.5) * -10;
-	camera.position.y = (cursor_y/window.innerHeight - 0.5) * 10;
+	camera.position.x = (cameraX/window.innerWidth - 0.5) * -10;
+	camera.position.y = (cameraY/window.innerHeight - 0.5) * 10;
 	camera.lookAt(blob.position);
 
 	composer.render();
