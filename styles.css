@@ -487,6 +487,9 @@ footer .socials a {
     footer .socials svg {
         width: 50px;
     }
+    footer .socials a {
+        padding-right: 50px;
+    }
     footer h2 {
         font-size: 40px;
     }
