@@ -100,7 +100,7 @@ section {
     justify-content: center;
     box-sizing: border-box;
     margin: 0 100px;
-    padding: 3vh 2.5vw 12vh 2.5vw;
+    padding: 30px 50px 70px 50px;
 }
 
 .row-container {
@@ -141,7 +141,7 @@ section {
     width: 100%;
     height: 590px;
     display: block;
-    padding: 0 0 4vh 0;
+    padding: 0 0 35px 0;
     overflow: hidden;
 }
 
@@ -278,42 +278,6 @@ section {
 
 #community p {
     font-size: 20px;
-}
-
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    position: fixed;
-
-    z-index: 100001;
-    width: 100%;
-    padding: 3vh 5vw 0vh 5vw;
-}
-
-header .logo {
-    font-size: 32px;
-    font-weight: bold;
-}
-
-header nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    counter-reset: item; 
-}
-
-header nav a {
-    font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-    font-weight: bold;
-    font-size: 120%;
-    padding: 0vh 1vw 0vh 1vw;
-    margin: 0vh 1vw 0vh 1vw;
-    text-decoration: none;
 }
 
 footer {
