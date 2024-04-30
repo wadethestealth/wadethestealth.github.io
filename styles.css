@@ -219,6 +219,7 @@ section {
     text-align: center;
     text-overflow: ellipsis;
     overflow: hidden;
+    font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 }
 
 #desktop {
