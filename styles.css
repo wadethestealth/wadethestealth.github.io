@@ -209,6 +209,18 @@ section {
     flex-direction: column;
 }
 
+#screen p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 439px;
+    height: 305px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 #desktop {
     flex-grow: 1;
 }
@@ -398,7 +410,7 @@ footer .socials {
 }
 
 footer .socials svg {
-    width: 1.2vw;
+    width: 28px;
 }
 
 footer .socials a {
@@ -471,6 +483,15 @@ footer .socials a {
     }
     aside.socials svg {
         width: 50px;
+    }
+    footer .socials svg {
+        width: 50px;
+    }
+    footer h2 {
+        font-size: 40px;
+    }
+    footer p {
+        font-size: 30px;
     }
     #intro .text h2 {
         font-size: 50px;
