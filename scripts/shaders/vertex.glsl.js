@@ -3,7 +3,7 @@ precision mediump float;
 uniform float uTime;
 
 #define freq 1.5
-#define amp 0.6
+#define amp 0.8
 
 //	Classic Perlin 3D Noise 
 //	by Stefan Gustavson
@@ -89,7 +89,7 @@ void main() {
     vNormal = normal;
     vUv = uv;
 
-    vec4 modelViewPosition = modelViewMatrix * vec4(position + noise((normal + uTime) * freq) * amp, 1.0 );
+    vec4 modelViewPosition = modelViewMatrix * vec4(position + normal * noise((normal + uTime) * freq) * amp, 1.0 );
     vec4 projectedPosition = projectionMatrix * modelViewPosition;
 	gl_Position = projectedPosition;
 }
