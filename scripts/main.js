@@ -7,21 +7,23 @@ import {fragmentShader} from './shaders/fragment.glsl.js';
 
 const desktop = document.getElementById("desktop");
 
-var cameraX = -1;
-var cameraY = -1;
+let cameraX = -1;
+let cameraY = -1;
 
-document.onmousemove = function(event) {
-	cameraX = event.clientX;
-	cameraY = event.clientY;
+function initializeDocumentListeners() {
+	document.addEventListener('mousemove', function(event) {
+		cameraX = event.clientX;
+		cameraY = event.clientY;
+	});
+	document.addEventListener('touchmove', function(event) {
+		if (event.touches.length < 1) {
+			return;
+		}
+		cameraX = event.touches.item(0).clientX;
+		cameraY = event.touches.item(0).clientY;
+	});
 }
-
-document.ontouchmove = function(event) {
-	if (event.touches.length < 1) {
-		return;
-	}
-	cameraX = event.touches.item(0).clientX;
-	cameraY = event.touches.item(0).clientY;
-}
+initializeDocumentListeners();
 
 const clock = new THREE.Clock();
 const scene = new THREE.Scene();
@@ -51,7 +53,7 @@ const material = new THREE.ShaderMaterial({
 });
 const blob = new THREE.Mesh(geometry, material);
 
-dirLight.target = blob;
+dirLight.lookAt(blob.position);
 
 scene.add(blob);
 scene.add(dirLight);
